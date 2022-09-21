@@ -1,15 +1,24 @@
 require:
   - rubocop-performance
+  - rubocop-rspec
 
 AllCops:
   NewCops: enable
   TargetRubyVersion: 3.0.3
 
-Style/Documentation:
+convention:Metrics/BlockLength:
+  Max: 70
+
+CyclomaticComplexity:
   Enabled: false
 
+Layout/LineLength:
+  Exclude:
+    - spec/**/*.rb
+
 Metrics/BlockLength:
-  Enabled: false
+  Exclude:
+    - spec/**/*.rb
 
 Metrics/MethodLength:
   Enabled: false
@@ -20,11 +29,21 @@ Metrics/ParameterLists:
 Metrics/AbcSize:
   Max: 200
 
-CyclomaticComplexity:
-  Enabled: false
-
 PerceivedComplexity:
   Enabled: false
 
-convention:Metrics/BlockLength:
-  Max: 70
+RSpec/MultipleExpectations:
+  Max: 10
+
+RSpec/ExampleLength:
+  Max: 20
+
+Style/Documentation:
+  Enabled: false
+
+
+
+
+
+
+

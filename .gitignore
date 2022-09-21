@@ -1,3 +1,5 @@
 .rspec
 desktop.ini
+spec/specs.txt
 .env
+info

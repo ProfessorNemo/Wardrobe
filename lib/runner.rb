@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
-require_relative 'lib/main'
+require_relative 'main'
 
-api_key = Dotenv.load('.env')['API_KEY']
+api_key = Dotenv.load('../.env')['API_KEY']
 
-current_temperature = TemperatureGetter.call(api_key: api_key)
+current_temperature = Wardrobe::TemperatureGetter.call(api_key: api_key)
 
 puts "Текущая температура: #{current_temperature} C"
 
-clothes_collection = Wardrobe.read_from_dir_files("#{__dir__}/data/*.txt")
+clothes_collection = Wardrobe::Checkroom.read_from_dir_files('../data/*.txt')
 
 clothes_list = clothes_collection.clothes_by_weather(current_temperature)
 
@@ -51,7 +51,7 @@ when 'Y'
   add_params = { name: name, type: type, temp_range: "(#{min_temp}, #{max_temp})" }
 
   # создаем новую вещь
-  new_thing = Thing.new(add_params)
+  new_thing = Wardrobe::Thing.new(add_params)
 
   # записать файл с вещью
   new_thing.add_new_thing

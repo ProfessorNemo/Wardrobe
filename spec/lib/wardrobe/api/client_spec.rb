@@ -7,8 +7,8 @@ RSpec.describe Wardrobe::Api::Client do
     [
       'https://api.openweathermap.org/data/2.5/weather?',
       ENV.fetch('FAKE_KEY', 'fake'),
-      ENV.fetch('LAT', 'fake'),
-      ENV.fetch('LON', 'fake')
+      ENV.fetch('FAKE_LAT'),
+      ENV.fetch('FAKE_LON')
     ]
   end
 
@@ -65,3 +65,4 @@ RSpec.describe Wardrobe::Api::Client do
     expect { test_client.connection({}) }.to raise_error(StandardError)
   end
 end
+

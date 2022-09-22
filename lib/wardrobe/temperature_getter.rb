@@ -17,7 +17,7 @@ module Wardrobe
     def call
       response ||= Faraday.get(OPENWEATHERMAP_API_URL, options).body
 
-      JSON.parse(response)['main']['temp'].to_f
+      JSON.parse(response)
     end
 
     private

@@ -16,8 +16,8 @@ module Wardrobe
 
       def options(client)
         {
-          lat: ENV.fetch('LAT'),
-          lon: ENV.fetch('LON'),
+          lat: ENV.fetch('FAKE_LAT'),
+          lon: ENV.fetch('FAKE_LON'),
           appid: client.token,
           units: 'metric'
         }

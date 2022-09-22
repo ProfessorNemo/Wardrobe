@@ -1,0 +1,147 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.myip.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.5.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 22 Sep 2022 15:37:57 GMT
+      Content-Type:
+      - text/html; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=CT8RF%2BUap%2BNK%2FOIxl%2F2RbTX3DzWOgS7C3io%2B0691BxZJb%2FIgSlHri7B3eveZpY4lFL5GF68mu3Hi4Jds1ey2KjrBXP8zwy%2BA3JME0dWmtjzPIGdzepD6JtX5T4jPSTQ%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 74ec1ff2fb1616ab-DME
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"ip":"178.66.157.205","country":"Russian Federation","cc":"RU"}'
+  recorded_at: Thu, 22 Sep 2022 15:37:57 GMT
+- request:
+    method: get
+    uri: http://ipinfo.io/178.66.157.205/geo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 22 Sep 2022 15:37:57 GMT
+      X-Envoy-Upstream-Service-Time:
+      - '2'
+      Strict-Transport-Security:
+      - max-age=2592000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 google
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "ip": "178.66.157.205",
+          "hostname": "pppoe.178-66-157-205.dynamic.avangarddsl.ru",
+          "city": "Saint Petersburg",
+          "region": "St.-Petersburg",
+          "country": "RU",
+          "loc": "59.9386,30.3141",
+          "org": "AS12389 PJSC Rostelecom",
+          "postal": "190000",
+          "timezone": "Europe/Moscow",
+          "readme": "https://ipinfo.io/missingauth"
+        }
+  recorded_at: Thu, 22 Sep 2022 15:37:57 GMT
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/2.5/weather?appid=<API_KEY>&lat=59.9386&lon=30.3141&units=metric
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.5.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Thu, 22 Sep 2022 15:37:57 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '475'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/weather?lat=59.94&lon=30.31&units=metric"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"coord":{"lon":30.3143,"lat":59.9388},"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}],"base":"stations","main":{"temp":11.05,"feels_like":9.93,"temp_min":10.62,"temp_max":11.05,"pressure":1020,"humidity":66},"visibility":10000,"wind":{"speed":2,"deg":40},"clouds":{"all":75},"dt":1663860869,"sys":{"type":1,"id":8926,"country":"RU","sunrise":1663818144,"sunset":1663862448},"timezone":10800,"id":519690,"name":"Novaya
+        Gollandiya","cod":200}'
+  recorded_at: Thu, 22 Sep 2022 15:37:57 GMT
+recorded_with: VCR 6.1.0

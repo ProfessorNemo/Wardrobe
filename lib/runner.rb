@@ -4,7 +4,7 @@ require_relative 'main'
 
 api_key = Dotenv.load('../.env')['API_KEY']
 
-current_temperature = Wardrobe::TemperatureGetter.call(api_key: api_key)
+current_temperature = Wardrobe::TemperatureGetter.call(api_key: api_key)['main']['temp'].to_f
 
 puts "Текущая температура: #{current_temperature} C"
 

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe Wardrobe::TemperatureGetter do
+  specify ''
   specify '#conversion' do
     converter_stub = class_double described_class
 

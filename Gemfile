@@ -2,6 +2,8 @@
 
 source 'https://rubygems.org'
 
+gem 'bcrypt', '~> 3.1'
+
 gem 'geocoder', '~> 1.8'
 
 gem 'faraday', '~> 2.5'

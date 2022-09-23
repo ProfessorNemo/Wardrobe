@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 22 Sep 2022 15:37:57 GMT
+      - Fri, 23 Sep 2022 14:25:24 GMT
       Content-Type:
       - text/html; charset=UTF-8
       Transfer-Encoding:
@@ -31,19 +31,19 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=CT8RF%2BUap%2BNK%2FOIxl%2F2RbTX3DzWOgS7C3io%2B0691BxZJb%2FIgSlHri7B3eveZpY4lFL5GF68mu3Hi4Jds1ey2KjrBXP8zwy%2BA3JME0dWmtjzPIGdzepD6JtX5T4jPSTQ%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=JfXcTUFlIOfFTDV5k7fSIjotb7W4J%2Bb7Akjatyu6BY8IDSRdjTeJBYO8qGzCWZNkKjRtmFEeLyEVfFPHFdlxD3LC3%2BGcdAsm4qVBJRIFjEHoxhjD0NtwaN2%2B9ZLsz90%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 74ec1ff2fb1616ab-DME
+      - 74f3f2ff8d1916e8-DME
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: '{"ip":"178.66.157.205","country":"Russian Federation","cc":"RU"}'
-  recorded_at: Thu, 22 Sep 2022 15:37:57 GMT
+  recorded_at: Fri, 23 Sep 2022 14:25:24 GMT
 - request:
     method: get
     uri: http://ipinfo.io/178.66.157.205/geo
@@ -75,7 +75,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 22 Sep 2022 15:37:57 GMT
+      - Fri, 23 Sep 2022 14:25:24 GMT
       X-Envoy-Upstream-Service-Time:
       - '2'
       Strict-Transport-Security:
@@ -101,7 +101,7 @@ http_interactions:
           "timezone": "Europe/Moscow",
           "readme": "https://ipinfo.io/missingauth"
         }
-  recorded_at: Thu, 22 Sep 2022 15:37:57 GMT
+  recorded_at: Fri, 23 Sep 2022 14:25:24 GMT
 - request:
     method: get
     uri: https://api.openweathermap.org/data/2.5/weather?appid=<API_KEY>&lat=59.9386&lon=30.3141&units=metric
@@ -123,11 +123,11 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Thu, 22 Sep 2022 15:37:57 GMT
+      - Fri, 23 Sep 2022 14:25:24 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '475'
+      - '479'
       Connection:
       - keep-alive
       X-Cache-Key:
@@ -140,8 +140,8 @@ http_interactions:
       - GET, POST
     body:
       encoding: UTF-8
-      string: '{"coord":{"lon":30.3143,"lat":59.9388},"weather":[{"id":803,"main":"Clouds","description":"broken
-        clouds","icon":"04d"}],"base":"stations","main":{"temp":11.05,"feels_like":9.93,"temp_min":10.62,"temp_max":11.05,"pressure":1020,"humidity":66},"visibility":10000,"wind":{"speed":2,"deg":40},"clouds":{"all":75},"dt":1663860869,"sys":{"type":1,"id":8926,"country":"RU","sunrise":1663818144,"sunset":1663862448},"timezone":10800,"id":519690,"name":"Novaya
+      string: '{"coord":{"lon":30.3125,"lat":59.9385},"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"base":"stations","main":{"temp":12.05,"feels_like":10.93,"temp_min":11.73,"temp_max":12.05,"pressure":1018,"humidity":62},"visibility":10000,"wind":{"speed":3,"deg":50},"clouds":{"all":40},"dt":1663942641,"sys":{"type":1,"id":8926,"country":"RU","sunrise":1663904684,"sunset":1663948665},"timezone":10800,"id":519690,"name":"Novaya
         Gollandiya","cod":200}'
-  recorded_at: Thu, 22 Sep 2022 15:37:57 GMT
+  recorded_at: Fri, 23 Sep 2022 14:25:24 GMT
 recorded_with: VCR 6.1.0

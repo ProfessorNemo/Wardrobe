@@ -19,7 +19,7 @@ RSpec.describe Wardrobe::TemperatureGetter do
 
   context 'when record request on cassette' do
     it 'can fetch & parse user data' do
-      meteodata = VCR.use_cassette('data/weather_data') do
+      meteodata = VCR.use_cassette('data/forecast') do
         described_class.call(api_key: ENV.fetch('API_KEY'))
       end
 

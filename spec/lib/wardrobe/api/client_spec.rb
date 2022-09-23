@@ -65,4 +65,3 @@ RSpec.describe Wardrobe::Api::Client do
     expect { test_client.connection({}) }.to raise_error(StandardError)
   end
 end
-

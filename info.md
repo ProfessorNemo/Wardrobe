@@ -18,6 +18,13 @@ $ rspec -e returns
 $ rspec --tag focus
 
 
+export PATH="$PATH:/home/professor/Документы/rubytut/gits/wardrobe/api_cassettes:$PATH"
+source ~/.bashrc
+chmod +x ./demo.rb
+
+Запустить:
+cd api_cassettes && demo.rb
+
 
 (byebug) response
 "{\"coord\":{\"lon\":30.3141,\"lat\":59.9386},\"weather\":[{\"id\":800,\"main\":\"Clear\",\"description\":\"clear sky\",\"icon\":\"01n\"}],\"base\":\"stations\",\"main\":{\"temp\":10.05,\"feels_like\":9.1,\"temp_min\":10.05,\"temp_max\":10.05,\"pressure\":1023,\"humidity\":76},\"visibility\":10000,\"wind\":{\"speed\":1,\"deg\":0},\"clouds\":{\"all\":0},\"dt\":1663793148,\"sys\":{\"type\":1,\"id\":8926,\"country\":\"RU\",\"sunrise\":1663731604,\"sunset\":1663776231},\"timezone\":10800,\"id\":519690,\"name\":\"Novaya Gollandiya\",\"cod\":200}"

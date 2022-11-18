@@ -73,6 +73,8 @@ ___
 ```
 $ bundle exec rspec
 ```
+Для тестирования API также можно использовать такой инструмент, как [`Postman`](https://www.postman.com/).
+
 Чтобы записать ответ от сервера на кассету по адресу "spec/fixtures/vcr_cassettes/data/forecast.yml", необходимо
 запустить слудующий тест:
 

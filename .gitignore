@@ -3,3 +3,4 @@ desktop.ini
 spec/specs.txt
 .env
 .info
+.byebug_history

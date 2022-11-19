@@ -4,7 +4,17 @@ require_relative 'main'
 
 api_key = Dotenv.load('../.env')['API_KEY']
 
-current_temperature = Wardrobe::TemperatureGetter.call(api_key: api_key)['main']['temp'].to_f
+begin
+  current_temperature = Wardrobe::TemperatureGetter.call(api_key: api_key)['main']['temp'].to_f
+rescue Faraday::Error => e
+  puts "Произошла ошибка класса #{e.class.name}:\n#{e.message}}"
+  puts 'Не удалось открыть TCP-соединение с сервером:('
+  puts 'Введите температуру вручную:'
+  current_temperature = $stdin.gets.chomp.to_i
+rescue StandardError => e
+  puts e.class.name
+  abort e.message
+end
 
 puts "Текущая температура: #{current_temperature} C"
 

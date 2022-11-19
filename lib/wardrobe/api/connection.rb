@@ -7,9 +7,9 @@ module Wardrobe
       MY_IP_API_URL = 'https://api.myip.com/'
 
       def connection(client)
-        response ||= Faraday.get(OPENWEATHERMAP_API_URL, options(client)).body
+        response ||= Faraday.get(OPENWEATHERMAP_API_URL, options(client))
 
-        JSON.parse(response)
+        JSON.parse(response.body)
       end
 
       private

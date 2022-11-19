@@ -15,9 +15,25 @@ module Wardrobe
     end
 
     def call
-      response ||= Faraday.get(OPENWEATHERMAP_API_URL, options).body
+      retries = 1
+      max_retries = 3
+      begin
+        response ||= Faraday.get(OPENWEATHERMAP_API_URL, options)
+      rescue Faraday::Error => e
+        puts "Произошла ошибка класса #{e.class.name}:\n#{e.message}}"
+        puts 'Не удалось открыть TCP-соединение с сервером:('
 
-      JSON.parse(response)
+        raise 'Запросили 3 раза, но увы:(' unless retries < max_retries
+
+        retries += 1
+        sleep 2**retries
+        retry # выполнить блок begin еще раз
+      rescue StandardError => e
+        puts e.class.name
+        abort e.message
+      else
+        JSON.parse(response.body)
+      end
     end
 
     private

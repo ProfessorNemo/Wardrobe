@@ -15,7 +15,15 @@ module Wardrobe
     end
 
     def call
-      response ||= Faraday.get(OPENWEATHERMAP_API_URL, options)
+      connection = Faraday.new(url: BASE_URL) do |faraday|
+        faraday.adapter Faraday.default_adapter
+        faraday.request :url_encoded
+        faraday.headers['user_agent'] = 'ruby application'
+        faraday.headers['connection'] = 'keep-alive'
+        faraday.headers['host'] = 'api.openweathermap.org'
+      end
+
+      response ||= connection.get(PATH, options)
 
       JSON.parse(response.body)
     end
@@ -24,7 +32,8 @@ module Wardrobe
 
     attr_reader :api_key
 
-    OPENWEATHERMAP_API_URL = 'https://api.openweathermap.org/data/2.5/weather?'
+    BASE_URL = 'https://api.openweathermap.org'
+    PATH = '/data/2.5/weather?'
     MY_IP_API_URL = 'https://api.myip.com/'
 
     def initialize(api_key)
